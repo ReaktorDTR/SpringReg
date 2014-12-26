@@ -24,13 +24,6 @@
 
      <!-- enables scanning for @Transactional annotations -->
     <tx:annotation-driven />
- 
-	
-	<!-- ==================		 3 Profiles to choose from 			=================== 
-									- jdbc (uses Spring" JdbcTemplate)
-									- jpa
-									- spring-data-jpa	
-		  =============================================================================-->
 	
     <beans profile="jpa,spring-data-jpa">
         <!-- JPA EntityManagerFactory -->
@@ -46,8 +39,8 @@
                  -->
             </property>
             <!-- gDickens: BOTH Persistence Unit and Packages to Scan are NOT compatible, persistenceUnit will win -->
-            <property name="persistenceUnitName" value="petclinic"/>
-            <property name="packagesToScan" value="org.springframework.samples.petclinic"/>
+            <property name="persistenceUnitName" value="nwserver"/>
+            <property name="packagesToScan" value="com.nwchecker.server"/>
         </bean>
 
         <!-- Transaction manager for a single JPA EntityManagerFactory (alternative to JTA) -->
